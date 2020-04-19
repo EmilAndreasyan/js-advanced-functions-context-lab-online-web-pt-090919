@@ -82,14 +82,14 @@ function calculatePayroll(record){
  for you to use if you need it!
  */
 
-let allWagesFor = function () {
-    let eligibleDates = this.timeInEvents.map(function (e) {
+let allWagesFor = function(){
+    let eligibleDates = this.timeInEvents.map(function(e){
         return e.date
     })
 
-    let payable = eligibleDates.reduce(function (memo, d) {
+    let payable = eligibleDates.reduce(function(memo, d){
         return memo + wagesEarnedOnDate.call(this, d)
-    }.bind(this), 0) // <== Hm, why did we need to add bind() there? We'll discuss soon!
+    }.bind(this), 0)
 
     return payable
 }
