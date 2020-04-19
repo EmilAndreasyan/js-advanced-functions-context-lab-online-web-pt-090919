@@ -49,7 +49,7 @@ function hoursWorkedOnDate(employee, soughtDate){
 }
 
 function wagesEarnedOnDate(employee, soughtDate){
-  let wage = hoursWorkedOnDate(employee, soughtDate) * employee.payPerHour;
+  let wage = hoursWorkedOnDate.call(this, ) * employee.payPerHour;
   return parseFloat(wage.toString())
 }
 
