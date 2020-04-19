@@ -1,19 +1,19 @@
 /* Your Code Here */
 
-let createEmployeeRecord = function(args){
+let createEmployeeRecord = function(row){
   return {
-    firstName: args[0],
-    familyName: args[1],
-    title: args[2],
-    payPerHour: args[3],
+    firstName: row[0],
+    familyName: row[1],
+    title: row[2],
+    payPerHour: row[3],
     timeInEvents: [],
     timeOutEvents: []
   }
 }
 
 let createEmployeeRecords = function(record){
-  return record.map(function(args){
-    return createEmployeeRecord(args)
+  return record.map(function(row){
+    return createEmployeeRecord(row)
   })
 }
 
@@ -28,7 +28,7 @@ let createTimeInEvent = function(employee, dateStamp){
   return employee
 }
 
-function createTimeOutEvent(employee, dateStamp){
+let createTimeOutEvent = function(employee, dateStamp){
   let [date, hour] = dateStamp.split(" ");
   employee.timeOutEvent.push({
     type: "TimeOut",
