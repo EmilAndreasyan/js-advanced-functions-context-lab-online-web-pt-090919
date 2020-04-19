@@ -25,7 +25,7 @@ let createTimeInEvent = function(employee, dateStamp){
     hour: parseInt(hour, 10),
     date
   })
-  return employee
+  return this
 }
 
 let createTimeOutEvent = function(employee, dateStamp){
@@ -35,7 +35,7 @@ let createTimeOutEvent = function(employee, dateStamp){
     hour: parseInt(hour, 10),
     date
   })
-  return employee
+  return this
 }
 
 function hoursWorkedOnDate(employee, soughtDate){
