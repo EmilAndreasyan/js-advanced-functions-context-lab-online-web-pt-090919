@@ -62,7 +62,7 @@ function findEmployeeByFirstName(srcArray, firstName){
 
 function calculatePayroll(record){
   return record.reduce(function(memo, i){
-    return memo + wagesEarnedOnDate(i)
+    return memo + allWagesFor.call(i)
   }, 0)
 }
 
