@@ -54,9 +54,10 @@ let hoursWorkedOnDate = function(soughtDate){
     return (outEvent.hour - inEvent.hour) / 100
 }
 
-function wagesEarnedOnDate(employee, soughtDate){
-  let wage = hoursWorkedOnDate.call(this, soughtDate) * this.payPerHour;
-  return parseFloat(wage.toString())
+let wagesEarnedOnDate = function(dateSought){
+    let rawWage = hoursWorkedOnDate.call(this, dateSought)
+        * this.payPerHour
+    return parseFloat(rawWage.toString())
 }
 
 function findEmployeeByFirstName(srcArray, firstName){
