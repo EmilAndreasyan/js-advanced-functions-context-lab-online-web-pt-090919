@@ -1,6 +1,6 @@
 /* Your Code Here */
 
-function createEmployeeRecord(args){
+let createEmployeeRecord = function(args){
   return {
     firstName: args[0],
     familyName: args[1],
@@ -11,13 +11,13 @@ function createEmployeeRecord(args){
   }
 }
 
-function createEmployeeRecords(record){
+let createEmployeeRecords = function(record){
   return record.map(function(args){
     return createEmployeeRecord(args)
   })
 }
 
-function createTimeInEvent(employee, dateStamp){
+let createTimeInEvent = function(employee, dateStamp){
   let [date, hour] = dateStamp.split(" ");
   
   employee.timeInEvent.push({
