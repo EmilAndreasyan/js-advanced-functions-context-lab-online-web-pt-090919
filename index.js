@@ -67,12 +67,12 @@ function findEmployeeByFirstName(srcArray, firstName){
   return undefined
 }
 
-function calculatePayroll(record){
-  return record.reduce(function(memo, i){
-    return memo + allWagesFor.call(i)
-  }, 0)
+let calculatePayroll = function(arrayOfEmployeeRecords){
+    return arrayOfEmployeeRecords.reduce(function(memo, rec){
+        return memo + allWagesFor.call(rec)
+    }, 0)
 }
-
+  
 /*
  We're giving you this function. Take a look at it, you might see some usage
  that's new and different. That's because we're avoiding a well-known, but
